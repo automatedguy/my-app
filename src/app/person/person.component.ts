@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './person.component.html',
   styleUrls: ['./person.component.css']
 })
+
 export class PersonComponent implements OnInit {
 
 
@@ -22,8 +23,8 @@ export class PersonComponent implements OnInit {
   getPersons() {
     this.persons = [];
     this.rest.getPersons().subscribe((data: {}) => {
-      console.log(data);
-      this.persons = Object.keys(data);
+      console.log(Object.keys(data["results"]));
+      this.persons = Object(data);
     });
   }
 

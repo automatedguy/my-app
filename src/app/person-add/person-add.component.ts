@@ -18,7 +18,7 @@ export class PersonAddComponent implements OnInit {
 
   addPerson() {
     this.rest.addPerson(this.personData).subscribe((result) => {
-      this.router.navigate(['/person-details/'+result.id]);
+      this.router.navigate(['person-details/'+ result.id]);
     }, (err) => {
       console.log(err);
     });

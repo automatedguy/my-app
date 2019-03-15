@@ -27,7 +27,7 @@ export class RestService {
   
   addPerson (person): Observable<any> {
     console.log(person);
-    return this.http.post<any>(endpoint + 'persons', JSON.stringify(person), httpOptions).pipe(
+    return this.http.post<any>(endpoint + 'persons/', JSON.stringify(person), httpOptions).pipe(
       tap((person) => console.log(`added person w/ id=${person.id}`)),
       catchError(this.handleError<any>('addPerson'))
     );
