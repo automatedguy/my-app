@@ -1,0 +1,11 @@
+<div *ngIf="person" class="persons">
+  <h2>{{product.nickname | uppercase}} Details</h2>
+  <div><span>First Name: </span>{{person.first_name}}</div>
+  <div><span>Last Name: </span>{{person.last_name}}</div>
+  <div><span>Creation Date: </span>{{person.creation_date | date}}</div>
+  <div>
+    <button routerLink="/person-edit/{{person._id}}">
+      Edit
+    </button>
+  </div>
+</div>

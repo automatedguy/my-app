@@ -1,0 +1,15 @@
+<h2>Person List</h2>
+
+<div>
+  <button (click)="add()">
+    Add
+  </button>
+</div>
+
+<ul class="persons">
+  <li *ngFor="let p of persons">
+      <span class="badge">{{-1}}</span> {{p.results}}
+    <button class="delete" title="delete person"
+      (click)="delete(person._id)">x</button>
+  </li>
+</ul>

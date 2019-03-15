@@ -1,0 +1,15 @@
+<div>
+  <h2>Person Edit</h2>
+  <div>
+    <label>Person Name:
+      <input [(ngModel)]="personData.nickname" placeholder="Person Nickame"/>
+    </label><br>
+    <label>Product Desc:
+      <input [(ngModel)]="personData.first_name" placeholder="Person First Name"/>
+    </label><br>
+    <label>Product Price:
+      <input [(ngModel)]="personData.last_name" placeholder="Peson Last Name"/>
+    </label><br>
+  </div>
+  <button (click)="updatePerson()">Update</button>
+</div>
